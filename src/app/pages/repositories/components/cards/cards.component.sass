@@ -1,4 +1,4 @@
-@import './../../styles/theme.sass'
+@import './../../../../styles/theme.sass'
 
 
 .container
@@ -42,14 +42,6 @@
             height: 80px
             border-radius: 50%
             background: $color-gray
-            img
-              width: 100%
-              border-radius: 50%
-            // img:hover
-            //   animation-name: img-profile
-            //   animation-fill-mode: forwards
-            //   animation-duration: 1s
-
           .name
             width: 231px
             height: 60px
@@ -73,13 +65,13 @@
               font-size: 16px
               font-weight: 300
         .row-location-avaliation
-          width: 600px
+          width: 100%
           margin-top: 16px
           display: flex
           flex-direction: row
           align-items: center
           .business
-            width: auto
+            width: 93px
             height: 16px
             text-align: center
             display: flex
@@ -91,9 +83,9 @@
               color: $color-gray
               margin-left: 4px
           .location
-            width: auto
-            height: 16px
             margin-left: 16px
+            width: 124px
+            height: 16px
             text-align: center
             display: flex
             flex-direction: row
@@ -106,9 +98,9 @@
               text-align: center
               margin-top: 0px
           .avaliation
-            width: auto
-            height: 16px
             margin-left: 16px
+            width: 35
+            height: 16px
             text-align: center
             display: flex
             flex-direction: row
@@ -120,8 +112,6 @@
               margin-left: 4px
               text-align: center
               margin-top: 0px
-            img
-              opacity: 0.5
       .delete
         width: 10%
         height: 100%
@@ -135,23 +125,8 @@
           justify-content: center
           align-items: center
           margin: 35px 84px 85px 0
-
         img
           cursor: pointer
         img:hover
           opacity: 0.7
 
-.skeleton
-  width: 80%
-
-@keyframes img-profile
-  from
-    transform: scale(1)
-  to
-    transform: scale(1.1)
-
-@keyframes img-profile-mouse-over
-  from
-    transform: scale(1.1)
-  to
-    transform: scale(1.0)

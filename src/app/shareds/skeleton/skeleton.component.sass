@@ -1,0 +1,23 @@
+@import './../../styles/theme.sass'
+
+
+.container-skeleton
+  height: 144px
+  background: purple
+  border-radius: 8px
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  animation-name: animation-skeleton
+  animation-iteration-count: infinite
+  animation-fill-mode: forwards
+  animation-duration: 1s
+  animation-timing-function: ease-in-out
+
+@keyframes animation-skeleton
+  from
+    background-color: #e7e5e5
+  to
+    background-color: #fdfdfdcc
+

@@ -1,27 +1,17 @@
 <div class="container">
   <div class="column-one">
-    <img src="assets/logo.png" alt="GitHub">
-    <div class="search-user">
+    <img src="assets/logo.png" alt="GitHub" class="logo-github">
+    <form class="search-user">
       <span>Buscar usuário</span>
       <p>Crie sua conta através do seu usuário do Github</p>
       <div class="input-group">
-        <div class="icon-input">
-          <div>
-          </div>
+        <div class="div-icon-input">
+          <img src="assets/icons/account_circle.svg" alt="Delete" height="24">
         </div>
-        <input type="text" placeholder="@username">
+        <input type="text" placeholder="@username" id="username">
       </div>
-
-      <!-- <form class="example-form">
-        <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Telephone</mat-label>
-          <span matPrefix>+1 &nbsp;</span>
-          <input type="tel" matInput placeholder="555-555-1234">
-          <mat-icon matSuffix>mode_edit</mat-icon>
-        </mat-form-field>
-      </form> -->
-      <button>Cadastrar</button>
-    </div>
+      <button  type="submit" (click)="setUsername()">Cadastrar</button>
+    </form>
   </div>
   <div class="column-two">
   </div>
