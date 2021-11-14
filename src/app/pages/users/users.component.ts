@@ -25,7 +25,6 @@ export class UsersComponent implements OnInit {
     this._userService.getUser().then(res => {
       this.data = res;
       this.loading = true;
-      console.log(this.data);
     });
   }
 
@@ -53,17 +52,17 @@ export class UsersComponent implements OnInit {
   }
 
   public mouseOutImage(){
-    let img = (<HTMLImageElement>document.getElementById("avatar"));
-    img.style.animationName = "img-profile-mouse-over";
-    img.style.animationFillMode = "forwards";
-    img.style.animationDuration = "1s";
+    let logo = (<HTMLImageElement>document.getElementById("avatar"));
+    logo.style.animationName = "cursor-out-element";
+    logo.style.animationFillMode = "forwards";
+    logo.style.animationDuration = "1s";
   }
 
   public mouseOverImage(){
-    let img = (<HTMLImageElement>document.getElementById("avatar"));
-    img.style.animationName = "img-profile";
-    img.style.animationFillMode = "forwards";
-    img.style.animationDuration = "1s";
+    let logo = (<HTMLImageElement>document.getElementById("avatar"));
+    logo.style.animationName = "cursor-in-element";
+    logo.style.animationFillMode = "forwards";
+    logo.style.animationDuration = "1s";
   }
 
 

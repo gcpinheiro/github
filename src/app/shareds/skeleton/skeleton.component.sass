@@ -3,21 +3,37 @@
 
 .container-skeleton
   height: 144px
-  background: purple
   border-radius: 8px
   display: flex
   flex-direction: row
   justify-content: center
   align-items: center
-  animation-name: animation-skeleton
-  animation-iteration-count: infinite
-  animation-fill-mode: forwards
-  animation-duration: 1s
-  animation-timing-function: ease-in-out
+  animation: animation-skeleton 1.5s linear infinite
+  opacity: .7
+  background-image: linear-gradient(to right, #d9d9d9 0%, rgba(0,0,0,0.12) 20%,#d9d9d9 40%, #d9d9d9 100%)
 
+  // animation-name: animation-skeleton
+  // animation-iteration-count: infinite
+  // animation-fill-mode: forwards
+  // animation-duration: 3s
+  // animation-timing-function: ease-in-out
+  // animation-timing-function: linear
+
+// @keyframes animation-skeleton
+//   from
+//     position: left
+//     background-color: #e7e5e5
+//   to
+//     position: right
+//     background-color: #fdfdfdcc
+
+// @keyframes animation-skeleton
+//   0%
+//     background-color: hsl(0,0%,80% )
+//   100%
+//     background-color: hsl(0,0%,85% )
 @keyframes animation-skeleton
-  from
-    background-color: #e7e5e5
-  to
-    background-color: #fdfdfdcc
-
+  0%
+    background-position: -400px 0
+  100%
+    background-position: 700px 0
