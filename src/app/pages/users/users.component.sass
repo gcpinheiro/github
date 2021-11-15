@@ -1,145 +1,153 @@
 @import './../../styles/theme.sass'
 
-
 .container
   width: 100%
-  height: 100%
+  height: auto
   display: flex
   flex-direction: column
   align-items: center
   background: #E5E5E5
   padding-top: 24px
-  .box-cards
+
+  .container-cards
     width: 80%
-    height: 144px
-    background: $color-secondary
-    border-radius: 8px
+    height: auto
     display: flex
-    flex-direction: row
-    justify-content: center
+    flex-direction: column
     align-items: center
-    .box-info
-      width: 90%
-      height: 90%
+
+    .box-cards
+      width: 100%
+      height: 144px
+      background: $color-secondary
+      border-radius: 8px
       display: flex
       flex-direction: row
-      justify-content: space-between
+      justify-content: center
       align-items: center
-      .personal-info
-        width: 327px
-        height: 111px
+      margin: 15px 0
+      .box-info
+        width: 90%
+        height: 90%
         display: flex
-        flex-direction: column
+        flex-direction: row
         justify-content: space-between
-        .row-name-image
-          width: 100%
-          height: 80px
+        align-items: center
+        .personal-info
+          width: 327px
+          height: 111px
           display: flex
-          flex-direction: row
+          flex-direction: column
           justify-content: space-between
-          .image-profile
-            width: 80px
+          .row-name-image
+            width: 100%
             height: 80px
-            border-radius: 50%
-            background: $color-gray
-            img
-              width: 100%
-              border-radius: 50%
-            // img:hover
-            //   animation-name: img-profile
-            //   animation-fill-mode: forwards
-            //   animation-duration: 1s
-
-          .name
-            width: 231px
-            height: 60px
             display: flex
-            flex-direction: column
+            flex-direction: row
             justify-content: space-between
-            margin-top: 10px
-            .full-name
+            .image-profile
+              width: 80px
+              height: 80px
+              border-radius: 50%
+              background: $color-gray
+              img
+                width: 100%
+                border-radius: 50%
+              // img:hover
+              //   animation-name: img-profile
+              //   animation-fill-mode: forwards
+              //   animation-duration: 1s
+
+            .name
+              width: 231px
+              height: 60px
+              display: flex
+              flex-direction: column
+              justify-content: space-between
+              margin-top: 10px
+              .full-name
+                display: flex
+                flex-direction: row
+                  //justify-content: space-between
+                align-items: center
+                span
+                  font-size: 24px
+                  font-weight: 700
+                img
+                  margin-left: 5%
+                  margin-top: 2%
+                  color: black
+              .user-name
+                font-size: 16px
+                font-weight: 300
+          .row-location-avaliation
+            width: 600px
+            margin-top: 16px
+            display: flex
+            flex-direction: row
+            align-items: center
+            .business
+              width: auto
+              height: 16px
+              text-align: center
               display: flex
               flex-direction: row
-                //justify-content: space-between
               align-items: center
               span
-                font-size: 24px
-                font-weight: 700
+                font-weight: 400
+                font-size: 12px
+                color: $color-gray
+                margin-left: 4px
+            .location
+              width: auto
+              height: 16px
+              margin-left: 16px
+              text-align: center
+              display: flex
+              flex-direction: row
+              align-items: center
+              span
+                font-weight: 400
+                font-size: 12px
+                color: $color-gray
+                margin-left: 4px
+                text-align: center
+                margin-top: 0px
+            .avaliation
+              width: auto
+              height: 16px
+              margin-left: 16px
+              text-align: center
+              display: flex
+              flex-direction: row
+              align-items: center
+              span
+                font-weight: 400
+                font-size: 12px
+                color: $color-gray
+                margin-left: 4px
+                text-align: center
+                margin-top: 0px
               img
-                margin-left: 5%
-                margin-top: 2%
-                color: black
-            .user-name
-              font-size: 16px
-              font-weight: 300
-        .row-location-avaliation
-          width: 600px
-          margin-top: 16px
-          display: flex
-          flex-direction: row
-          align-items: center
-          .business
-            width: auto
-            height: 16px
-            text-align: center
+                opacity: 0.5
+        .delete
+          width: 10%
+          height: 100%
+          .div-icon-delete
+            width: 32px
+            height: 32px
+            border-radius: 50%
+            background-color: $color-gray-medium
             display: flex
             flex-direction: row
+            justify-content: center
             align-items: center
-            span
-              font-weight: 400
-              font-size: 12px
-              color: $color-gray
-              margin-left: 4px
-          .location
-            width: auto
-            height: 16px
-            margin-left: 16px
-            text-align: center
-            display: flex
-            flex-direction: row
-            align-items: center
-            span
-              font-weight: 400
-              font-size: 12px
-              color: $color-gray
-              margin-left: 4px
-              text-align: center
-              margin-top: 0px
-          .avaliation
-            width: auto
-            height: 16px
-            margin-left: 16px
-            text-align: center
-            display: flex
-            flex-direction: row
-            align-items: center
-            span
-              font-weight: 400
-              font-size: 12px
-              color: $color-gray
-              margin-left: 4px
-              text-align: center
-              margin-top: 0px
-            img
-              opacity: 0.5
-      .delete
-        width: 10%
-        height: 100%
-        .div-icon-delete
-          width: 32px
-          height: 32px
-          border-radius: 50%
-          background-color: $color-gray-medium
-          display: flex
-          flex-direction: row
-          justify-content: center
-          align-items: center
-          margin: 35px 84px 85px 0
+            margin: 35px 84px 85px 0
 
-        img
-          cursor: pointer
-        img:hover
-          opacity: 0.7
+          img
+            cursor: pointer
+          img:hover
+            opacity: 0.7
 
 .skeleton
   width: 80%

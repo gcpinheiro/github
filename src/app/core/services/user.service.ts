@@ -22,20 +22,20 @@ export class UserService {
     if(response){
       this.arrayUsers.push(response);
       const index = this.arrayUsers.length - 1;
-      console.log(this.arrayUsers[index]);
-      console.log(this.arrayUsers);
-      this.setUserSessionStorage(username, this.arrayUsers[index]);
+      // console.log(this.arrayUsers[index]);
+      // console.log(this.arrayUsers);
+      this.setUserSessionStorage("Users", JSON.stringify(this.arrayUsers));
     }
     return response;
   }
 
   public getUserSessionStorage(): String{
-    const username = window.sessionStorage.getItem("username");
+    const username = window.localStorage.getItem("username");
     return username != null? username: "";
   }
 
-  public setUserSessionStorage(nameUser: String, user:User){
-    window.sessionStorage.setItem(`${nameUser}`, `${user}`);
+  public setUserSessionStorage(nameUser: String, user:String){
+    window.localStorage.setItem(`${nameUser}`, `${user}`);
   }
 
 }

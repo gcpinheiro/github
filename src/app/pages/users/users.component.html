@@ -1,39 +1,41 @@
 <app-header></app-header>
 <div class="container">
   <app-skeleton *ngIf="!loading" class="skeleton"></app-skeleton>
-  <div class="box-cards" *ngIf="loading">
-    <div class="box-info">
-      <div class="personal-info">
-        <div class="row-name-image">
-          <div class="image-profile">
-            <img [src]="data?.avatar_url" alt="" id="avatar" (mouseout)="mouseOutImage()" (mouseover)="mouseOverImage()">
-          </div>
-          <div class="name">
-            <div class="full-name">
-              <span>{{data?.name}}</span>
-              <img src="assets/icons/icon-right.png" alt="" height="15px">
+  <div class="container-cards" *ngIf="loading">
+    <div class="box-cards" *ngFor="let array of dataArray">
+      <div class="box-info">
+        <div class="personal-info">
+          <div class="row-name-image">
+            <div class="image-profile">
+              <img [src]="array?.avatar_url" alt="" id="avatar" (mouseout)="mouseOutImage()" (mouseover)="mouseOverImage()">
             </div>
-            <span class="user-name">{{data?.login}}</span>
+            <div class="name">
+              <div class="full-name">
+                <span>{{array?.name}}</span>
+                <img src="assets/icons/icon-right.png" alt="" height="15px">
+              </div>
+              <span class="user-name">{{array?.login}}</span>
+            </div>
+          </div>
+          <div class="row-location-avaliation">
+            <div class="business">
+              <img src="assets/icons/business.png" alt="business" height="16px">
+              <span>{{array?.company}}</span>
+            </div>
+            <div class="location">
+              <img src="assets/icons/place.png" alt="location" height="16px">
+              <span>{{array?.location}}</span>
+            </div>
+            <div class="avaliation">
+              <img src="assets/icons/user.png" alt="location" height="16px">
+              <span>{{ formatNumberFollowers(array?.followers)}}</span>
+            </div>
           </div>
         </div>
-        <div class="row-location-avaliation">
-          <div class="business">
-            <img src="assets/icons/business.png" alt="business" height="16px">
-            <span>{{data?.company}}</span>
+        <div class="delete">
+          <div class="div-icon-delete">
+            <img src="assets/icons/delete.png" alt="delete" height="24px">
           </div>
-          <div class="location">
-            <img src="assets/icons/place.png" alt="location" height="16px">
-            <span>{{data?.location}}</span>
-          </div>
-          <div class="avaliation">
-            <img src="assets/icons/user.png" alt="location" height="16px">
-            <span>{{ formatNumberFollowers(data?.followers)}}</span>
-          </div>
-        </div>
-      </div>
-      <div class="delete">
-        <div class="div-icon-delete">
-          <img src="assets/icons/delete.png" alt="delete" height="24px">
         </div>
       </div>
     </div>

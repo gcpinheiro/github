@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
 
   public setUsername(){
     const username = (<HTMLInputElement>document.getElementById("username"));
-    window.sessionStorage.setItem('username', username.value);
+    window.localStorage.setItem('username', username.value);
     this._router.navigate(['/users']);
   }
 

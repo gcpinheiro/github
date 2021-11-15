@@ -12,24 +12,23 @@ import { UserService } from 'src/app/core/services/user.service';
 export class UsersComponent implements OnInit {
 
   public data: User | undefined;
-  public dataArray: ResultsUsers;
+  public dataArray: User[];
   public loading = false;
 
   constructor(private _userService: UserService) { }
 
   ngOnInit(): void {
     this._initializeObservers();
+    console.log("Usuários: ", typeof(this.dataArray));
   }
 
   private _initializeObservers(){
     this._userService.getUser().then(res => {
       this.data = res;
+      this.dataArray = JSON.parse(localStorage.getItem("Users") || '{}');
+      console.log(this.dataArray[0].name);
       this.loading = true;
     });
-  }
-
-  public saveUsers(){
-    this.dataArray.results.push()
   }
 
   public formatNumberFollowers(followers: any){
